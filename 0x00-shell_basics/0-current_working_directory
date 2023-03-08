@@ -1,2 +1,2 @@
 #!/bin/bash
-absolute_path=$(readlink -f $(pwd))
+pwd
