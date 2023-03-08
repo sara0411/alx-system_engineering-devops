@@ -1,3 +1,2 @@
 #!/bin/bash
 absolute_path=$(readlink -f $(pwd))
-echo "$absolute_path"
