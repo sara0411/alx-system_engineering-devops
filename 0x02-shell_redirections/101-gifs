@@ -1,3 +1,2 @@
-#!/bin/bash
-find . -type f -iname "*.gif" | sed 's/\.[^.]*$//' | sort -f | xargs -I {} basename {} | tr '\n' '\0' | xargs -0 -n1 echo
-echo
+#!/bin/bash 
+find . -type f -iname "*.gif" | sed 's/\.[^.]*$//' | LC_COLLATE=C sort -f
