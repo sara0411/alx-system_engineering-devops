@@ -1,0 +1,2 @@
+#!/bin/bash
+compgen -v | (while read v; do declare -p $v; done) && compgen -A function
