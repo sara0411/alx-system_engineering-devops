@@ -1,0 +1,24 @@
+-For every additional element, why you are adding it
+Load Balancer: for distribution of incoming traffic
+Another Server: to prevent crashing just in case there is overloading because of bulky incoming traffic
+-What distribution algorithm your load balancer is configured with and how it works
+HAProxy is a software loadbalancer and by default it uses round robin which distributes the incoming traffic sequentially evenly across the array of machines being load balanced
+-Is your load-balancer enabling an Active-Active or Active-Passive setup, explain the difference between both
+Active-Active, this is because it uses one load balancer which distributes all the incoming traffic to the servers.
+Differences: in Active-Active, the incoming traffic is distributed across servers by a main load balancer while in Active-Passive, the user machines are connected to a main load balancer
+which handles all the incoming while a backup load balancer(monitors performance of the main) is on standby incase of a service outage
+-How a database Primary-Replica (Master-Slave) cluster works
+It enables data from one database server (the master) to be replicated to one or more database servers (the slaves)
+-What is the difference between the Primary node and the Replica node in regard to the application
+
+
+ISSUES WITH THIS INFRASTRUCTURE
+-Where are SPOF
+If the servers reside in the same data center, then any outage like power would cause dysfunction
+If the Primary MySQL database server is down, the entire site would be unable to make changes to the site
+The server containing the load balancer and the application server connecting to the primary database server are also SPOFs.
+-Security issues (no firewall, no HTTPS)
+It is using HTTP which is not secure as data is being transfered without being encrpted
+It lacks firewall meaning any incoming traffic has access to the data.
+-No monitoring
+There is no monitoring being done, we don't know whether our web is online, working fast, returning error everytime or monitoring requests
