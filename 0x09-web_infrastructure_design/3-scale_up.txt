@@ -1,0 +1,4 @@
+For every additional element, why you are adding it
+-Firewalls: This protects each server from unwanted and unauthorized users rather than protecting a single server
+-Split components: allows the user to see parts of the page earlier without having to wait for the entire page to be rendered on the server
+-Back up Load Balancer: Maintain uninterrupted service just in case the main one fails
