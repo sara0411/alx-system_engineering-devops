@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-ssh -i ~/.ssh/school ubuntu@54.90.33.241
+hostname='54.90.33.241'
+
+sh -i ~/.ssh/school ubuntu@$hostname
