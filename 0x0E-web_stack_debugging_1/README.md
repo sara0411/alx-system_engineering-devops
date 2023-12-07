@@ -1,6 +1,2 @@
-#!/usr/bin/env bash
-# Configures an Nginx server to listen on port 80
-
-rm /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-service nginx restart
+0x0E-web_stack_debugging_1
+:
